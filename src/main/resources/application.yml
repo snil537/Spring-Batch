@@ -1,6 +1,8 @@
 spring:
   profiles:
     active: local
+#Prameter arguments로 job.name 값이 넘어오면 해당 값과 일치하는 Job만 실행하겠다. job.name이 있으면 job.name값을 할당하고, 없으면 NONE을 할당하겠다
+spring.batch.job.names: ${job.name:NONE}
 
 ---
 spring:
